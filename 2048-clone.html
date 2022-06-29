@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=.0">
+    <title>Let's play 2048</title>
+    <link rel="stylesheet" href="./2048-clone.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+
+            <div class="header-left">
+                <h1 class="title">2048</h1>
+
+                <div class="score-container">
+                    <div class="scr-container">
+                        <div class="scr">
+                            Score
+                        </div>
+                        <div class="score" id="scr-number">
+                            0
+                        </div>
+                    </div>
+                    <div class="best-container">
+                        <div class="best">
+                            Best
+                        </div>
+                        <div class="score" id="best-number">
+                            0
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="above-game">
+
+                <p class="subtitle">Join the tiles, get to <span>2048!</span><br><a href="#how-to-play"
+                        class="how-to-play">How to play →</a></p>
+                <button class="btn">New Game</button>
+            </div>
+        </header>
+
+        <div class="game-container" id="game-container">
+
+            <div class="grid-container">
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+            </div>
+            <div class="tile-container">
+            </div>
+        </div>
+
+        <section id="how-to-play">
+            <p><span>HOW TO PLAY:</span> Use your <span>arrow keys</span> to move the tiles. Tiles with the same number
+                <span>merge into one when they touch.</span> Add them up to reach 2048!
+                <a href="#game-container" class="how-to-play">Start playing →</a>
+            </p>
+        </section>
+
+    </div>
+
+
+    <script src="./2048-clone.js"></script>
+</body>
+
+</html>

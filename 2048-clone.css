@@ -1,0 +1,284 @@
+:root {
+    --text-color: #776E65;
+    --tile-color: #eee4da;
+    --tile-gold-color: #edc22e;
+    --tile-gold-glow-color: lighten(#edc22e, 15%);
+    --game-container-background: #bbada0;
+    --tile-size: 106.25px;
+    --grid-spacing: 15px;
+}
+
+* {
+    background: none;
+    background: #faf8ef;
+    color: var(--text-color);
+    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+.title {
+    font-size: 5rem;
+}
+
+span {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+section {
+    font-size: 100rem;
+}
+
+
+.container {
+    margin: 0 auto;
+    width: 500px;
+}
+
+
+header {
+    margin: 40px 0;
+
+}
+
+.score-container {
+    display: flex;
+}
+
+
+.header-left {
+    display: grid;
+    grid-template-columns: 2fr auto;
+}
+
+
+.above-game {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.above-game .btn {
+    font-weight: bold;
+    padding: 0 1rem;
+    border-radius: 4px;
+}
+
+.above-game .subtitle {
+    font-size: 1.1rem;
+}
+
+.above-game .subtitle span {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+/* Button */
+.btn {
+    background-color: #8f7a66;
+    color: #faf8ef;
+    font-size: 18px;
+
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.scr-container,
+.best-container {
+    width: 100%;
+    height: 2rem;
+    background: var(--game-container-background);
+    padding: 0.6rem 1rem 3rem 1rem;
+    border-radius: 0.2rem;
+}
+
+.best-container {
+    margin-left: 0.5rem;
+}
+
+.scr,
+.best {
+    font-size: 0.8rem;
+    background-color: var(--game-container-background);
+    color: var(--tile-color);
+    text-transform: uppercase;
+}
+
+.score {
+    background: none;
+    color: #faf8ef;
+    text-align: center;
+}
+
+a {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+
+
+
+.game-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-color: var(--game-container-background);
+    margin-bottom: 2.5rem;
+    border-radius: 0.4rem;
+    padding: 15px;
+}
+/* grid */
+.grid-container {
+    position: absolute;
+    background-color: unset;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-row {
+    background-color: unset;
+    margin-bottom: var(--grid-spacing);
+}
+
+.grid-row:last-child {
+    margin: 0;
+}
+
+
+.grid-cell {
+    background-color: #eee4da59;
+    height: var(--tile-size);
+    width: var(--tile-size);
+    margin-right: var(--grid-spacing);
+    border-radius: 0.3rem;
+    float: left;
+}
+
+.grid-cell:last-child {
+    margin: 0;
+}
+
+/* tile */
+
+
+.tile-container {
+    position: absolute;
+    z-index: 1;
+}
+
+.tile-inner {
+    background-color: var(--tile-color);
+    border-radius: 0.3rem;
+    color: #F9F6F2;
+    width: var(--tile-size);
+    height: var(--tile-size);
+    line-height: var(--tile-size);
+    text-align: center;
+    box-shadow: 0 0 30px 10px rgb(243 215 116 / 0%), inset 0 0 0 1px rgb(255 255 255 / 0%);
+    font-weight: bold;
+
+}
+
+.tile-2 .tile-inner {
+    background-color: var(--tile-color);
+    color: var(--text-color);
+
+}
+
+.tile-4 .tile-inner {
+    background-color: rgb(238, 225, 201);
+    color: var(--text-color);
+
+}
+
+.tile-8 .tile-inner {
+    background-color: #f3b27a;
+
+}
+
+.tile-16 .tile-inner {
+    background-color: #f69664;
+
+}
+
+.tile-32 .tile-inner {
+    background-color: #f77c5f;
+
+}
+
+.tile-64 .tile-inner {
+    background-color: #f75f3b;
+}
+
+.tile-128 .tile-inner {
+    background-color: #edc950;
+}
+
+.tile-256 .tile-inner {
+    background-color: #edd073;
+}
+
+
+.tile-512 .tile-inner {
+    background-color: #edc950;
+}
+
+.tile-1024 .tile-inner {
+    background-color: #edc53f;
+}
+
+.tile-1024 .tile-inner {
+    background-color: #edc22e;
+}
+
+.tile-2048 .tile-inner {
+    background-color: #edc22e;
+}
+
+
+section p {
+    font-size: 1.1rem;
+    line-height: 2rem;
+    margin-top: 30px;
+}
+
+/* Game over */
+.game-over {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(238, 228, 218, 0.73);
+}
+
+.game-over p {
+    text-align: center;
+    background: none;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.game-over .btn {
+    height: 40px;
+    padding: 0 20px;
+    margin: 0 auto;
+    border-radius: 3px;
+}
